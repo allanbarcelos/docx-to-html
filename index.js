@@ -64,6 +64,10 @@ app.post('/convert', (req, res) => {
         })
         .catch(error => {
             res.status(500).json({ error: `Failed to convert DOCX to HTML` });
+            // Redirecione de volta à página inicial após 5 segundos
+            setTimeout(() => {
+                res.redirect('/');
+            }, 3000);
         });
 });
 
