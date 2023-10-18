@@ -60,3 +60,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             systemctl restart nginx
+            pm2 restart docx-to-html

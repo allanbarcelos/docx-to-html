@@ -53,6 +53,7 @@ app.post('/convert', (req, res) => {
     mammoth.convertToHtml({ path: docxFile.tempFilePath })
         .then(result => {
             // res.send(result.value);
+            const htmlContent = result.value;
 
             // Defina os cabeçalhos para forçar o download
             res.setHeader('Content-Type', 'application/octet-stream');
