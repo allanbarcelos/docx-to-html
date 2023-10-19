@@ -14,7 +14,6 @@ app.use(fileUpload({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(express.static(path.join(__dirname, 'public'))); // Para servir arquivos estáticos
 
 // Página HTML incorporada no código JavaScript
 const htmlPage = `
